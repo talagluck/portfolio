@@ -1,0 +1,65 @@
+*{
+    color: black;
+    font-family: Lato;
+}
+#Header-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 20fr;
+    grid-template-rows: repeat(4,5%);
+    background-color: red;
+    /* grid-gap: 20px; */
+    /* grid-template-areas: 
+        "Header-cont" */
+
+}
+
+.ActivePage{
+    text-decoration-line: underline;
+    /* background-color: blueviolet; */
+  
+}
+
+a:link{
+    text-decoration-line: none;
+}
+
+.Header-sub{
+    margin: 5% 20%;
+}
+
+#Portfolio-header{
+    grid-area:0/2/span 1/span 1;
+}
+#About-header{
+    grid-area: 0/3/span 1/span 1;
+}
+#Blog-header{
+    grid-area: 0/4/span 1/span 1;
+}
+
+.PortfolioItem{
+    max-width: 30%;
+
+}
+.PortfolioItem img{
+    max-width: 100%;
+}
+
+.PortfolioItemContainer{
+    display: flex;
+
+}
+.Gallery{
+    position: absolute;
+    height: 80vh;
+    width: 80vw;
+    top: 10vh;
+    left: 10vw;
+    background-color: olive;
+
+}
+.Gallery img{
+    max-width: 100%;
+
+
+}
