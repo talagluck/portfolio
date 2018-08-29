@@ -4,7 +4,7 @@ import Gallery from './Gallery';
 import AndalusianDisciplinaryStaff from '../ProjectsData/AndalusianDisciplinaryStaff';
 import MartialAsclepias from '../ProjectsData/MartialAsclepias';
 import './Components.css'
-
+    
 class Portfolio extends React.Component {
     constructor() {
         super();
@@ -12,6 +12,16 @@ class Portfolio extends React.Component {
             galleryVisible: false,
             galleryItem: MartialAsclepias
         };
+    }
+
+    closeGallery = () =>{
+        this.setState(
+            () => {
+                return {
+                    galleryVisible: false
+                }
+            }
+        )
     }
     handleClick = (item) => {
         
@@ -26,10 +36,12 @@ class Portfolio extends React.Component {
     }
     render() {
         return (
-            <div className="PortfolioItemContainer">
-                <PortfolioItem data={AndalusianDisciplinaryStaff} handleClick={this.handleClick}/>
-                <PortfolioItem data={MartialAsclepias} handleClick={this.handleClick}/>
-                {this.state.galleryVisible ? <Gallery data={this.state.galleryItem} /> : null}
+            <div>
+                <div className="PortfolioItemContainer" onClick={this.closeGallery}>
+                    <PortfolioItem item={AndalusianDisciplinaryStaff} itemHandleClick={this.handleClick}/>
+                    <PortfolioItem item={MartialAsclepias} itemHandleClick={this.handleClick}/>
+                </div>
+                {this.state.galleryVisible ? <Gallery item={this.state.galleryItem} handleClosed={this.closeGallery} /> : null}
             </div>
         )
 

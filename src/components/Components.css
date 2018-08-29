@@ -47,6 +47,7 @@ a:link{
 
 .PortfolioItemContainer{
     display: flex;
+    min-height: 95vh;
 
 }
 .Gallery{
@@ -62,4 +63,22 @@ a:link{
     max-width: 100%;
 
 
+}
+
+.Gallery .closeButton{
+    position: absolute;
+    color: red;
+}
+
+.Gallery .arrow{
+    position: absolute;
+    top: 50%;
+    font-size: 48px;
+}
+
+.Gallery .leftArrow{
+    left:2%;
+}
+.Gallery .rightArrow{
+    right:2%;
 }
