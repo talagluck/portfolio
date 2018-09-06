@@ -13,10 +13,10 @@ class Page extends React.Component {
             <BrowserRouter>
                 <div>
 
-                    <Route component={Header} />
+                    <Route component={Header} className="Header-Component" />
                     <div className="Body-content">
                     <Switch>
-                        <Route className="About-content" path="/about" component={About} />
+                        <Route path="/about" component={About} />
                         <Route path="/portfolio" component={Portfolio} />
                         <Route component={NotFound} />
                     </Switch>

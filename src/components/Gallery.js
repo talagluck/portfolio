@@ -1,6 +1,6 @@
 import React from 'react';
 import './Components.css'
-
+import arrow from '../assets/Left.png'
 class Gallery extends React.Component {
     constructor(){
         super();
@@ -51,8 +51,14 @@ class Gallery extends React.Component {
             <div className="Gallery">
                 <span className="closeButton" onClick={this.childHandleClosed}>X</span>
                 <div>
-                    <span className="arrow leftArrow" onClick={this.prevImage}>&lt;</span>
-                    <span className="arrow rightArrow" onClick ={this.nextImage}>&gt;</span>
+                    <span className="arrow leftArrow" onClick={this.prevImage}>
+                    <img src={arrow}/>
+                    </span>
+                    {/* <span className="arrow leftArrow" onClick={this.prevImage}>&lt;</span> */}
+                    <span className="arrow rightArrow" onClick ={this.nextImage}>
+                    <img src={arrow}/>
+                    </span>
+                    {/* <span className="arrow rightArrow" onClick ={this.nextImage}>&gt;</span> */}
                 </div>
                 <img src={this.props.item.images[this.state.imageIndex]} onClick={this.nextImage}></img>
             </div>

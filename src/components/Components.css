@@ -4,30 +4,31 @@
 }
 #Header-wrapper{
     display: grid;
-    grid-template-columns: repeat(4, 1fr) 20fr;
-    grid-template-rows: repeat(4,5%);
-    background-color: red;
+    grid-template-columns: repeat(3, 1fr) 10fr;
+    grid-column-gap: 10px;
+    /* grid-template-rows: repeat(4,5%); */
+    /* background-color: red; */
     /* grid-gap: 20px; */
     /* grid-template-areas: 
         "Header-cont" */
 
 }
 
-.ActivePage{
+#Header-wrapper .ActivePage{
     text-decoration-line: underline;
     /* background-color: blueviolet; */
   
 }
 
-a:link{
+#Header-wrapper a:link{
     text-decoration-line: none;
 }
 
-.Header-sub{
+#Header-wrapper .Header-sub{
     margin: 5% 20%;
 }
 
-#Portfolio-header{
+/* #Portfolio-header{
     grid-area:0/2/span 1/span 1;
 }
 #About-header{
@@ -35,21 +36,24 @@ a:link{
 }
 #Blog-header{
     grid-area: 0/4/span 1/span 1;
-}
+} */
 
+.PortfolioItemContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    min-height: 95vh;
+
+}
 .PortfolioItem{
-    max-width: 30%;
+    max-width: 90%;
 
 }
 .PortfolioItem img{
     max-width: 100%;
 }
 
-.PortfolioItemContainer{
-    display: flex;
-    min-height: 95vh;
-
-}
 .Gallery{
     position: absolute;
     height: 80vh;
@@ -66,6 +70,9 @@ a:link{
 }
 
 .Gallery .closeButton{
+    top: .5%;
+    left: .5%;
+    font-family: arial;
     position: absolute;
     color: red;
 }
@@ -74,11 +81,14 @@ a:link{
     position: absolute;
     top: 50%;
     font-size: 48px;
+    transform: scale(0.3);
 }
 
 .Gallery .leftArrow{
-    left:2%;
+    left:-1%;
 }
 .Gallery .rightArrow{
-    right:2%;
+    transform:rotate(180deg) scale(0.3);
+    /* transform: rotate(180deg); */
+    right:-1%;
 }

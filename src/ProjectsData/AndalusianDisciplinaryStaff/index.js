@@ -1,6 +1,6 @@
-import Andalusian1 from "./Andalusian1.jpg"
-import Andalusian2 from "./Andalusian2.jpg"
-import Andalusian3 from "./Andalusian3.jpg"
+import Andalusian1 from "./1.jpg"
+import Andalusian2 from "./2.jpg"
+import Andalusian3 from "./3.jpg"
 
 let project = {
     title: "Project 1", 
