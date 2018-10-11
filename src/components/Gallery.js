@@ -10,7 +10,23 @@ class Gallery extends React.Component {
 
     }
 
+    componentDidMount(){
+        document.addEventListener('keydown', this.handleKeyDown )
+    }
 
+    componentWillUnmount(){
+        document.removeEventListener('keydown', this.handleKeyDown)
+
+    }
+
+    handleKeyDown = (event) =>{
+        console.log(event.keyCode);
+        if(event.keyCode==27){
+            this.props.handleClosed();
+        }
+
+
+    }
     prevImage = () => {
         this.setState(
             (prevState)=>{

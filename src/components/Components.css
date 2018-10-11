@@ -3,21 +3,14 @@
     font-family: Lato;
 }
 #Header-wrapper{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) 10fr;
-    grid-column-gap: 10px;
-    /* grid-template-rows: repeat(4,5%); */
-    /* background-color: red; */
-    /* grid-gap: 20px; */
-    /* grid-template-areas: 
-        "Header-cont" */
+    display: flex;
+   
 
 }
 
 #Header-wrapper .ActivePage{
     text-decoration-line: underline;
-    /* background-color: blueviolet; */
-  
+    /* background-color: blueviolet; */  
 }
 
 #Header-wrapper a:link{
@@ -25,7 +18,7 @@
 }
 
 #Header-wrapper .Header-sub{
-    margin: 5% 20%;
+    margin: 8px 10px;
 }
 
 /* #Portfolio-header{
@@ -37,21 +30,37 @@
 #Blog-header{
     grid-area: 0/4/span 1/span 1;
 } */
-
+.Body-content{
+    /* display: flex;
+    justify-content: space-around; */
+}
 .PortfolioItemContainer{
+    width: 90vw;
+    /* margin:auto; */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    min-height: 95vh;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(auto-fill, 300px);
+    grid-gap: 5px;
+
+    /* min-height: 95vh; */
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+
+
 
 }
 .PortfolioItem{
-    max-width: 90%;
-
+    margin-bottom: 2vw;
 }
 .PortfolioItem img{
-    max-width: 100%;
+    /* width: 30vw;
+    height: 30vw; */
+    width:25%;
+    /* max-width: 300px;
+    max-height: 300px; */
+
+    
 }
 
 .Gallery{

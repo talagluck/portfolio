@@ -4,7 +4,6 @@ import Header from './Header';
 import Portfolio from './Portfolio';
 import NotFound from './NotFound';
 import About from './About';
-import PortfolioItem from './PortfolioItem';
 import './Page.css'
 
 class Page extends React.Component {
@@ -12,7 +11,6 @@ class Page extends React.Component {
         return(
             <BrowserRouter>
                 <div>
-
                     <Route component={Header} className="Header-Component" />
                     <div className="Body-content">
                     <Switch>

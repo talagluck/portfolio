@@ -42,7 +42,7 @@ class Portfolio extends React.Component {
     render() {
         return (
             <div>
-                <div className="PortfolioItemContainer" onClick={this.closeGallery}>
+                <div className="PortfolioItemContainer" onClickCapture={this.closeGallery}>
                     <PortfolioItem item={AndalusianDisciplinaryStaff} itemHandleClick={this.handleClick}/>
                     <PortfolioItem item={MartialAsclepias} itemHandleClick={this.handleClick}/>
                     <PortfolioItem item={Hanging1} itemHandleClick={this.handleClick}/>

@@ -9,8 +9,8 @@ class PortfolioItem extends React.Component {
   }
   render() {
     return (
-      <div className="PortfolioItem" onClick={this.childHandleClick}>
-      <img src={this.props.item.images[0]}></img>
+      <div className="PortfolioItem" style={{backgroundImage: "url("+this.props.item.images[0]+")"}} onClick={this.childHandleClick}>
+      
       </div>
     );
   }
